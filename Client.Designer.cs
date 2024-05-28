@@ -73,6 +73,7 @@
             this.dataClient.RowTemplate.Height = 33;
             this.dataClient.Size = new System.Drawing.Size(413, 420);
             this.dataClient.TabIndex = 1;
+            this.dataClient.Visible = false;
             // 
             // nom
             // 
@@ -253,7 +254,7 @@
             // 
             this.remise.Location = new System.Drawing.Point(651, 431);
             this.remise.Name = "remise";
-            this.remise.Size = new System.Drawing.Size(150, 31);
+            this.remise.Size = new System.Drawing.Size(101, 31);
             this.remise.TabIndex = 22;
             // 
             // label8

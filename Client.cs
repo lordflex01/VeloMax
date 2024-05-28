@@ -19,6 +19,20 @@ namespace VeloMax
             InitializeComponent();
         }
 
+        private void FormaterListe()
+        {
+            dataClient.Columns["IDCLIENT"].Visible = false;
+            dataClient.Columns["ADRESSE"].HeaderText = "Adresse";
+            dataClient.Columns["ADRESSE"].Width = 80;
+            dataClient.Columns["TELEPHONE"].HeaderText = "Tel";
+            dataClient.Columns["TELEPHONE"].Width = 100;
+            dataClient.Columns["COURRIEL"].HeaderText = "Email";
+            dataClient.Columns["COURRIEL"].Width = 135;
+            dataClient.MultiSelect = false;
+            dataClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataClient.ReadOnly = true;
+        }
+
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -68,23 +82,57 @@ namespace VeloMax
             DBConnection dbCon = new DBConnection();
             if (dbCon.IsConnect())
             {
-                if (Recherche.Text.Length == 0)
+                if (Recherche.Text.Length != 0)
                 {
-                    string query = "SELECT ID, Adresse, Telephone, Courriel FROM client where Nom =?nom ORDER BY Nom";
-                    query = Tools.PrepareLigne(query, "?nom", Tools.PrepareChamp(Recherche.Text, "Chaine"));
+                    string query = "SELECT IDCLIENT, Adresse, Telephone, Courriel FROM client where Adresse LIKE ?adresse ORDER BY Adresse";
+                    query = Tools.PrepareLigne(query, "?adresse", Tools.PrepareChamp(Recherche.Text, "Chaine"));
 
                     var cmd = new MySqlCommand(query, dbCon.Connection);
                     var reader = cmd.ExecuteReader();//Remplissage du curseur
                     List<Clients> LesClients = new List<Clients>();
+                    while (reader.Read())
+                    {
+                        Clients client = new Clients
+                        {
+                            IDCLIENT = (int)reader["IDCLIENT"],
+                            ADRESSE = (string)reader["ADRESSE"],
+                            TELEPHONE = (string)reader["TELEPHONE"],
+                            COURRIEL = (string)reader["COURRIEL"],
+                        };
+                        LesClients.Add(client);
+                    }
+
+                    dataClient.DataSource = null;
+                    dataClient.DataSource = LesClients;
+                    FormaterListe();
+                    reader.Close();
+                    dbCon.Close();
+                    dataClient.Visible = true;
                 } else
                 {
-                    string query = "SELECT ID, Adresse, Telephone, Courriel FROM client ORDER BY Nom";
-                    query = Tools.PrepareLigne(query, "?nom", Tools.PrepareChamp(Recherche.Text, "Chaine"));
-
+                    string query = "SELECT IDCLIENT, Adresse, Telephone, Courriel FROM client ORDER BY Adresse";
+                   
                     var cmd = new MySqlCommand(query, dbCon.Connection);
                     var reader = cmd.ExecuteReader();//Remplissage du curseur
                     List<Clients> LesClients = new List<Clients>();
+                    while (reader.Read())
+                    {
+                        Clients client = new Clients
+                        {
+                            IDCLIENT = (int)reader["IDCLIENT"],
+                            ADRESSE = (string)reader["ADRESSE"],
+                            TELEPHONE = (string)reader["TELEPHONE"],
+                            COURRIEL = (string)reader["COURRIEL"],
+                        };
+                        LesClients.Add(client);
+                    }
 
+                    dataClient.DataSource = null;
+                    dataClient.DataSource = LesClients;
+                    FormaterListe();
+                    reader.Close();
+                    dbCon.Close();
+                    dataClient.Visible = true;
                 }
             }
         }

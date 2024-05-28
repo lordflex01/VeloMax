@@ -28,83 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnRetour = new System.Windows.Forms.Button();
+            this.dataFournisseur = new System.Windows.Forms.DataGridView();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtAdresse = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.TextBox();
+            this.txtVille = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnReact = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSiret = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFournisseur)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRetour
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "RETOUR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRetour.Location = new System.Drawing.Point(12, 12);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(112, 34);
+            this.btnRetour.TabIndex = 0;
+            this.btnRetour.Text = "RETOUR";
+            this.btnRetour.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataFournisseur
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(447, 429);
-            this.dataGridView1.TabIndex = 1;
+            this.dataFournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFournisseur.Location = new System.Drawing.Point(12, 80);
+            this.dataFournisseur.Name = "dataFournisseur";
+            this.dataFournisseur.RowHeadersWidth = 62;
+            this.dataFournisseur.RowTemplate.Height = 33;
+            this.dataFournisseur.Size = new System.Drawing.Size(447, 429);
+            this.dataFournisseur.TabIndex = 1;
             // 
-            // textBox1
+            // txtNom
             // 
-            this.textBox1.Location = new System.Drawing.Point(705, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtNom.Location = new System.Drawing.Point(705, 174);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(150, 31);
+            this.txtNom.TabIndex = 2;
             // 
-            // textBox2
+            // txtContact
             // 
-            this.textBox2.Location = new System.Drawing.Point(705, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 31);
-            this.textBox2.TabIndex = 3;
+            this.txtContact.Location = new System.Drawing.Point(705, 238);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(150, 31);
+            this.txtContact.TabIndex = 3;
             // 
-            // textBox3
+            // txtAdresse
             // 
-            this.textBox3.Location = new System.Drawing.Point(705, 297);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(348, 31);
-            this.textBox3.TabIndex = 4;
+            this.txtAdresse.Location = new System.Drawing.Point(705, 297);
+            this.txtAdresse.Name = "txtAdresse";
+            this.txtAdresse.Size = new System.Drawing.Size(348, 31);
+            this.txtAdresse.TabIndex = 4;
             // 
-            // textBox4
+            // txtCP
             // 
-            this.textBox4.Location = new System.Drawing.Point(705, 359);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 31);
-            this.textBox4.TabIndex = 5;
+            this.txtCP.Location = new System.Drawing.Point(705, 359);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(105, 31);
+            this.txtCP.TabIndex = 5;
             // 
-            // textBox5
+            // txtVille
             // 
-            this.textBox5.Location = new System.Drawing.Point(903, 359);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 31);
-            this.textBox5.TabIndex = 6;
+            this.txtVille.Location = new System.Drawing.Point(903, 359);
+            this.txtVille.Name = "txtVille";
+            this.txtVille.Size = new System.Drawing.Size(150, 31);
+            this.txtVille.TabIndex = 6;
             // 
             // label1
             // 
@@ -163,16 +163,16 @@
             this.radioButton1.Text = "Très bon";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // btnReact
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(844, 435);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 29);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Bon";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnReact.AutoSize = true;
+            this.btnReact.Location = new System.Drawing.Point(844, 435);
+            this.btnReact.Name = "btnReact";
+            this.btnReact.Size = new System.Drawing.Size(68, 29);
+            this.btnReact.TabIndex = 13;
+            this.btnReact.TabStop = true;
+            this.btnReact.Text = "Bon";
+            this.btnReact.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
@@ -205,12 +205,12 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Réactivité";
             // 
-            // textBox6
+            // txtSiret
             // 
-            this.textBox6.Location = new System.Drawing.Point(705, 112);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 31);
-            this.textBox6.TabIndex = 17;
+            this.txtSiret.Location = new System.Drawing.Point(705, 112);
+            this.txtSiret.Name = "txtSiret";
+            this.txtSiret.Size = new System.Drawing.Size(150, 31);
+            this.txtSiret.TabIndex = 17;
             // 
             // label7
             // 
@@ -221,55 +221,55 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "N° SIRET";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.Location = new System.Drawing.Point(684, 524);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 34);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "ENREGISTRER";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Green;
+            this.btnSave.Location = new System.Drawing.Point(684, 524);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(142, 34);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "ENREGISTRER";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(891, 524);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 34);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "SUPPRIMER";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Location = new System.Drawing.Point(891, 524);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(133, 34);
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.Text = "SUPPRIMER";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // Fournisseur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 582);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtSiret);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.btnReact);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtVille);
+            this.Controls.Add(this.txtCP);
+            this.Controls.Add(this.txtAdresse);
+            this.Controls.Add(this.txtContact);
+            this.Controls.Add(this.txtNom);
+            this.Controls.Add(this.dataFournisseur);
+            this.Controls.Add(this.btnRetour);
             this.Name = "Fournisseur";
             this.Text = "Fournisseur";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFournisseur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,26 +277,26 @@
 
         #endregion
 
-        private Button button1;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private Button btnRetour;
+        private DataGridView dataFournisseur;
+        private TextBox txtNom;
+        private TextBox txtContact;
+        private TextBox txtAdresse;
+        private TextBox txtCP;
+        private TextBox txtVille;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton btnReact;
         private RadioButton radioButton3;
         private RadioButton radioButton4;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox txtSiret;
         private Label label7;
-        private Button button2;
-        private Button button3;
+        private Button btnSave;
+        private Button btnDelete;
     }
 }
