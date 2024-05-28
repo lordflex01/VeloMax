@@ -90,6 +90,24 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.OData.Edm/7.21.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OData.Edm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OData.Edm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Win32.SystemEvents/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -682,6 +700,23 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.OData.Edm/7.21.2": {
+      "sha512": "QFx7SWPmqhWjrdWYgwDfnUljGF89fWC9v227tIQLSM3/1Yb44AsJL2TZH5rpEInJfA6hUlhUrZgCLLSjDGYpxg==",
+      "type": "package",
+      "path": "microsoft.odata.edm/7.21.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.OData.Edm.dll",
+        "lib/net45/Microsoft.OData.Edm.xml",
+        "lib/netstandard1.1/Microsoft.OData.Edm.dll",
+        "lib/netstandard1.1/Microsoft.OData.Edm.xml",
+        "lib/netstandard2.0/Microsoft.OData.Edm.dll",
+        "lib/netstandard2.0/Microsoft.OData.Edm.xml",
+        "microsoft.odata.edm.7.21.2.nupkg.sha512",
+        "microsoft.odata.edm.nuspec"
       ]
     },
     "Microsoft.Win32.SystemEvents/4.7.0": {
@@ -1789,6 +1824,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Microsoft.OData.Edm >= 7.21.2",
       "MySql.Data >= 8.3.0"
     ]
   },
@@ -1831,6 +1867,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "Microsoft.OData.Edm": {
+            "target": "Package",
+            "version": "[7.21.2, )"
+          },
           "MySql.Data": {
             "target": "Package",
             "version": "[8.3.0, )"

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6HNozuKCn1edMNWErssA+6k0513mG1Ijs7goyk41Ydw4XK8Z35dXOy4xlCnI2WnO53LGdAsPlJiVz0Rb1cApKA==",
+  "dgSpecHash": "tAEicHQ/Yu/uMlfvVU3OpmcMrWyejV0uRYwEeIcRUpM/cFtHhkA+vaAp6yEjl2+DxADV5XwCNVtpNrPshNMljg==",
   "success": true,
   "projectFilePath": "C:\\Users\\diene\\source\\repos\\VeloMax\\VeloMax\\VeloMax.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\diene\\.nuget\\packages\\k4os.hash.xxhash\\1.0.8\\k4os.hash.xxhash.1.0.8.nupkg.sha512",
     "C:\\Users\\diene\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\diene\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\diene\\.nuget\\packages\\microsoft.odata.edm\\7.21.2\\microsoft.odata.edm.7.21.2.nupkg.sha512",
     "C:\\Users\\diene\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\diene\\.nuget\\packages\\mysql.data\\8.3.0\\mysql.data.8.3.0.nupkg.sha512",
     "C:\\Users\\diene\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

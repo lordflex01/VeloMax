@@ -30,6 +30,11 @@ namespace VeloMax
 
         public bool IsConnect()
         {
+            Server = "127.0.0.1";
+            DatabaseName = "Velomax";
+            UserName = "root";
+            Password = "";
+
             if (Connection == null)
             {
                 if (String.IsNullOrEmpty(DatabaseName))

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace VeloMax
 {
-    internal class Piece
+    public class Piece
     {
+        
     }
 }

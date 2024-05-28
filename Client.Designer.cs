@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnRetour = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataClient = new System.Windows.Forms.DataGridView();
             this.nom = new System.Windows.Forms.TextBox();
             this.prenom = new System.Windows.Forms.TextBox();
             this.adresse = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.typeclientb = new System.Windows.Forms.RadioButton();
             this.remise = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataClient)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRetour
@@ -64,15 +64,15 @@
             this.btnRetour.Text = "RETOUR";
             this.btnRetour.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataClient
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(413, 420);
-            this.dataGridView1.TabIndex = 1;
+            this.dataClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataClient.Location = new System.Drawing.Point(22, 137);
+            this.dataClient.Name = "dataClient";
+            this.dataClient.RowHeadersWidth = 62;
+            this.dataClient.RowTemplate.Height = 33;
+            this.dataClient.Size = new System.Drawing.Size(413, 420);
+            this.dataClient.TabIndex = 1;
             // 
             // nom
             // 
@@ -224,6 +224,7 @@
             this.search.TabIndex = 19;
             this.search.Text = "RECHERCHER";
             this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // typeclienti
             // 
@@ -292,11 +293,11 @@
             this.Controls.Add(this.adresse);
             this.Controls.Add(this.prenom);
             this.Controls.Add(this.nom);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataClient);
             this.Controls.Add(this.btnRetour);
             this.Name = "Client";
             this.Text = "Client";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +306,7 @@
         #endregion
 
         private Button btnRetour;
-        private DataGridView dataGridView1;
+        private DataGridView dataClient;
         private TextBox nom;
         private TextBox prenom;
         private TextBox adresse;

@@ -34,10 +34,6 @@ namespace VeloMax
             try
             {
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "Velomax";
-                dbCon.UserName = "root";
-                dbCon.Password = "";
 
                 if (dbCon.IsConnect())
                 {
@@ -63,10 +59,6 @@ namespace VeloMax
             try
             {
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "Velomax";
-                dbCon.UserName = "root";
-                dbCon.Password = "";//Pour éviter d'afficher le mot de passe en clair dans le code
                 int Identifiant = -1;
                 if (dbCon.IsConnect())
                 {
@@ -99,11 +91,6 @@ namespace VeloMax
                 IDCLIENT = GiveNewID();
                 DBConnection dbCon = new DBConnection();
 
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "Velomax";
-                dbCon.UserName = "root";
-                dbCon.Password = "";
-
                 if (dbCon.IsConnect())
                 {
 
@@ -130,10 +117,6 @@ namespace VeloMax
             try
             {
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "Velomax";
-                dbCon.UserName = "root";
-                dbCon.Password = "";
                 if (dbCon.IsConnect())
                 {
                     String sqlString = "DELETE FROM client WHERE IDCLIENT = ?id_P";

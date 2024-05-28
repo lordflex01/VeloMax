@@ -45,7 +45,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -196,20 +196,21 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button16
+            // btnClose
             // 
-            this.button16.Location = new System.Drawing.Point(1114, 289);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(144, 146);
-            this.button16.TabIndex = 8;
-            this.button16.Text = "CLOTURE";
-            this.button16.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(1114, 289);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(144, 146);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "CLOTURE";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Accueil
             // 
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1331, 512);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -219,6 +220,7 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Accueil";
+            this.Load += new System.EventHandler(this.Accueil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -244,6 +246,6 @@
         private Button button13;
         private Button button14;
         private Button button15;
-        private Button button16;
+        private Button btnClose;
     }
 }

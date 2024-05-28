@@ -42,3 +42,4 @@ C:\Users\diene\source\repos\VeloMax\VeloMax\obj\Debug\net6.0-windows\VeloMax.Sta
 C:\Users\diene\source\repos\VeloMax\VeloMax\obj\Debug\net6.0-windows\VeloMax.Stock.resources
 C:\Users\diene\source\repos\VeloMax\VeloMax\obj\Debug\net6.0-windows\VeloMax.Vente.resources
 C:\Users\diene\source\repos\VeloMax\VeloMax\obj\Debug\net6.0-windows\VeloMax.csproj.CopyComplete
+C:\Users\diene\source\repos\VeloMax\VeloMax\bin\Debug\net6.0-windows\Microsoft.OData.Edm.dll

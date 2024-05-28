@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace VeloMax
 {
     public partial class Client : Form
     {
-        Clients client;
+        Clients client = new Clients();
         public Client()
         {
             InitializeComponent();
@@ -60,6 +61,32 @@ namespace VeloMax
                 client.Save();
 
             MessageBox.Show("Enregistrement effectué");
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            DBConnection dbCon = new DBConnection();
+            if (dbCon.IsConnect())
+            {
+                if (Recherche.Text.Length == 0)
+                {
+                    string query = "SELECT ID, Adresse, Telephone, Courriel FROM client where Nom =?nom ORDER BY Nom";
+                    query = Tools.PrepareLigne(query, "?nom", Tools.PrepareChamp(Recherche.Text, "Chaine"));
+
+                    var cmd = new MySqlCommand(query, dbCon.Connection);
+                    var reader = cmd.ExecuteReader();//Remplissage du curseur
+                    List<Clients> LesClients = new List<Clients>();
+                } else
+                {
+                    string query = "SELECT ID, Adresse, Telephone, Courriel FROM client ORDER BY Nom";
+                    query = Tools.PrepareLigne(query, "?nom", Tools.PrepareChamp(Recherche.Text, "Chaine"));
+
+                    var cmd = new MySqlCommand(query, dbCon.Connection);
+                    var reader = cmd.ExecuteReader();//Remplissage du curseur
+                    List<Clients> LesClients = new List<Clients>();
+
+                }
+            }
         }
     }
 }

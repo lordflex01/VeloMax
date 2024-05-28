@@ -12,6 +12,7 @@ namespace VeloMax
 {
     public partial class Accueil : Form
     {
+        
         public Accueil()
         {
             InitializeComponent();
@@ -57,6 +58,18 @@ namespace VeloMax
         {
             Employe PageEmploye = new Employe();
             PageEmploye.Show();
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            Login PageLogin = new Login();
+            PageLogin.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Login PageLogin = new Login();
+            PageLogin.Show();
         }
     }
 }
