@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VeloMax
 {
-    public partial class Vente : Form
+    public partial class VueCommande : Form
     {
-        public Vente()
+        public VueCommande()
         {
             InitializeComponent();
         }

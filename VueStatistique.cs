@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VeloMax
 {
-    public partial class Depot : Form
+    public partial class VueStatistique : Form
     {
-        public Depot()
+        public VueStatistique()
         {
             InitializeComponent();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

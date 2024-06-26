@@ -20,43 +20,43 @@ namespace VeloMax
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Client PageClient = new Client();
+            VueClient PageClient = new VueClient();
             PageClient.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Depot PageDepot = new Depot();
-            PageDepot.Show();
+            VueProduit PageProduit = new VueProduit();
+            PageProduit.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            Vente PageVente = new Vente();
-            PageVente.Show();
+            VueCommande PageCommande = new VueCommande();
+            PageCommande.Show();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            Fournisseur PageFournisseur = new Fournisseur();
-            PageFournisseur.Show();
+            VueFournisseur PageFounisseur = new VueFournisseur();
+            PageFounisseur.Show();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Statistique PageStatistique = new Statistique();
+            VueStatistique PageStatistique = new VueStatistique();
             PageStatistique.Show();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            Stock PageStock = new Stock();
+            VueStock PageStock = new VueStock();
             PageStock.Show();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            Employe PageEmploye = new Employe();
+            VueEmploye PageEmploye = new VueEmploye();
             PageEmploye.Show();
         }
 
