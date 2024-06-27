@@ -94,7 +94,11 @@ CREATE TABLE commandes (
     date_commande DATE NOT NULL,
     adresse_livraison VARCHAR(255) NOT NULL,
     date_livraison DATE,
-    prix_total DECIMAL(10,2) NOT NULL
+    prix_total DECIMAL(10,2) NOT NULL,
+    client_id INT,
+    employe_id INT,
+    FOREIGN KEY (client_id) REFERENCES client(idClient)
+    FOREIGN KEY (employe_id) REFERENCES employe(idEmploye)
 );
 
 CREATE TABLE details_commande_velos (
