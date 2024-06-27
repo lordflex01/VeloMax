@@ -153,6 +153,7 @@ namespace VeloMax
                 }
             }
             InitializeForm();
+            InitializeDataGridView();
         }
     }
 }

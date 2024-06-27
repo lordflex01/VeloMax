@@ -40,7 +40,7 @@ namespace VeloMax
                             Fournisseur fournisseur = new Fournisseur
                             {
                                 Siret = reader.GetString("siret"),
-                                NomFournisseur = reader.GetString("nom"),
+                                NomFournisseur = reader.GetString("nom_fournisseur"),
                                 Reactivite = (ReactiviteEnum)Enum.Parse(typeof(ReactiviteEnum), reader.GetString("reactivite"), true),
                                 Contact = reader.GetString("contact"),
                                 Adresse = reader.GetString("adresse")
@@ -68,7 +68,7 @@ namespace VeloMax
                 if (dbCon.IsConnect())
                 {
 
-                    string query = "INSERT INTO fournisseur (siret, nom_fournisseur, reactivite, adresse, contact) VALUES (@Siret, @NomFournisseur, @Contact, @Adresse, @Reactivite)";
+                    string query = "INSERT INTO fournisseur (siret, nom_fournisseur, contact, adresse, reactivite) VALUES (@Siret, @NomFournisseur, @Contact, @Adresse, @Reactivite)";
                     var command = new MySqlCommand(query, dbCon.Connection);
 
                     //sqlString = Tools.PrepareLigne(sqlString, "?id", Tools.PrepareChamp(IDCLIENT.ToString(), "Nombre"));
@@ -93,8 +93,24 @@ namespace VeloMax
 
         }
 
-        public void DeleteFournisseur()
+        public void DeleteFournisseur(string Siret)
         {
+            try
+            {
+                DBConnection dbCon = new DBConnection();
+                if (dbCon.IsConnect())
+                {
+                    string query = "DELETE FROM fournisseur WHERE siret = @Siret";
+                    var command = new MySqlCommand(query, dbCon.Connection);
+
+                    command.Parameters.AddWithValue("@Siret", Siret);
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+
+            }
 
         }
     }

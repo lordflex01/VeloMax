@@ -9,14 +9,7 @@ using System.Threading.Tasks;
 
 namespace VeloMax
 {
-    public enum TypeContrat
-    {
-        [EnumMember(Value = "plein temps")]
-        PleinTemps,
-
-        [EnumMember(Value = "temps partiel")]
-        TempsPartiel
-    }
+    
     
     public class Employe
     {
@@ -25,7 +18,7 @@ namespace VeloMax
 
         public string Nom { get; set; }
 
-        public TypeContrat TypeContrat { get; set; }
+        public TypeContratEnum TypeContrat { get; set; }
 
         public string Role { get; set; }
 
@@ -33,6 +26,12 @@ namespace VeloMax
 
         public float? Prime { get; set; }
 
+        public enum TypeContratEnum
+        {
+            
+            Plein_Temps,
+            Temps_Partiel
+        }
         public List<Employe> GetAllEmployes()
         {
             List<Employe> employes = new List<Employe>();
@@ -52,7 +51,7 @@ namespace VeloMax
                             {
                                 IdEmploye = reader.GetInt32("idEmploye"),
                                 Nom = reader.GetString("nom"),
-                                TypeContrat = (TypeContrat)Enum.Parse(typeof(TypeContrat), reader.GetString("type_contrat"), true),
+                                TypeContrat = (TypeContratEnum)Enum.Parse(typeof(TypeContratEnum), reader.GetString("type_contrat"), true),
                                 Role = reader.IsDBNull(reader.GetOrdinal("role")) ? null : reader.GetString("role"),
                                 Salaire = reader.GetFloat("salaire"),
                                 Prime = reader.IsDBNull(reader.GetOrdinal("prime")) ? null : (float?)reader.GetFloat("prime")

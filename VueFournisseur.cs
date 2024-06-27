@@ -43,5 +43,22 @@ namespace VeloMax
             fournisseur.AddFournisseur();
             LoadFournisseurs();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridViewFournisseurs.CurrentRow != null)
+            {
+                var selectedFournisseur = dataGridViewFournisseurs.CurrentRow.DataBoundItem as Fournisseur;
+                if (selectedFournisseur != null)
+                {
+                    string siret = selectedFournisseur.Siret;
+                    fournisseur.DeleteFournisseur(siret);
+                }
+            }
+            LoadFournisseurs();
+        }
     }
-}
+    }
+
+

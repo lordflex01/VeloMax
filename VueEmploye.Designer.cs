@@ -51,8 +51,8 @@
             // 
             this.cbTypeContrat.FormattingEnabled = true;
             this.cbTypeContrat.Items.AddRange(new object[] {
-            "Plein temps",
-            "Temps partiel"});
+            "Plein_Temps",
+            "Temps_Partiel"});
             this.cbTypeContrat.Location = new System.Drawing.Point(12, 230);
             this.cbTypeContrat.Name = "cbTypeContrat";
             this.cbTypeContrat.Size = new System.Drawing.Size(120, 33);

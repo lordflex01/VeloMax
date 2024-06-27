@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace VeloMax
+﻿namespace VeloMax
 {
     public partial class VueEmploye : Form
     {
@@ -35,7 +25,7 @@ namespace VeloMax
         private void btnSave_Click(object sender, EventArgs e)
         {
             employe.Nom = tbNom.Text;
-            employe.TypeContrat = (TypeContrat)Enum.Parse(typeof(TypeContrat), cbTypeContrat.SelectedItem.ToString().Replace(" ", ""), true);
+            employe.TypeContrat = (Employe.TypeContratEnum)Enum.Parse(typeof(Employe.TypeContratEnum), cbTypeContrat.SelectedItem.ToString(), true);
             employe.Role = cbRole.SelectedItem?.ToString();
             employe.Salaire = float.Parse(tbSalaire.Text);
             employe.Prime = string.IsNullOrEmpty(tbPrime.Text) ? null : (float?)float.Parse(tbPrime.Text);

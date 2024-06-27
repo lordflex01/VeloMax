@@ -150,7 +150,7 @@ namespace VeloMax
                     string query = "DELETE FROM client WHERE idClient = @IdClient";
                     var command = new MySqlCommand(query, dbCon.Connection);
 
-                    command.Parameters.AddWithValue("@IdClient", IdClient);
+                    command.Parameters.AddWithValue("@IdClient", idClient);
                     command.ExecuteNonQuery();
                 }
             }

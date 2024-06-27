@@ -56,7 +56,7 @@ CREATE TABLE adhesions (
     id_programme INT,
     date_adhesion DATE,
     date_expiration DATE,
-    FOREIGN KEY (id_client) REFERENCES clients(idClient),
+    FOREIGN KEY (id_client) REFERENCES client(idClient),
     FOREIGN KEY (id_programme) REFERENCES programmes(idProgramme)
 );
 
@@ -103,7 +103,7 @@ CREATE TABLE details_commande_velos (
     numero_produit VARCHAR(20),
     quantite INT,
     FOREIGN KEY (numero_commande) REFERENCES commandes(numero_commande),
-    FOREIGN KEY (numero_produit) REFERENCES velos(numero_produit)
+    FOREIGN KEY (numero_produit) REFERENCES velo(numero_produit)
 );
 
 CREATE TABLE details_commande_pieces (
@@ -112,5 +112,5 @@ CREATE TABLE details_commande_pieces (
     numero_produit VARCHAR(20),
     quantite INT,
     FOREIGN KEY (numero_commande) REFERENCES commandes(numero_commande),
-    FOREIGN KEY (numero_produit) REFERENCES pieces(numero_produit)
+    FOREIGN KEY (numero_produit) REFERENCES piece(numero_produit)
 );
