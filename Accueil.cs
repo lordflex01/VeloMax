@@ -16,6 +16,8 @@ namespace VeloMax
         public Accueil()
         {
             InitializeComponent();
+            Login PageLogin = new Login();
+            PageLogin.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)

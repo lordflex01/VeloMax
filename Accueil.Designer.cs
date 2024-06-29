@@ -202,7 +202,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(144, 146);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "CLOTURE";
+            this.btnClose.Text = "ADHESION";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
