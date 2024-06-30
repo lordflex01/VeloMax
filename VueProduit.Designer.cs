@@ -25,17 +25,17 @@
         private DataGridView dataGridViewPieces;
         private TextBox tbNumeroProduit;
         private TextBox tbNom;
-        private TextBox tbGrandeur;
+        private ComboBox tbGrandeur;
         private TextBox tbPrixUnitaire;
-        private TextBox tbLigneProduit;
+        private ComboBox tbLigneProduit;
         private DateTimePicker tbDateIntro;
         private DateTimePicker tbDateOutro;
         private TextBox tbDescription;
-        private TextBox tbNomFournisseur;
+        private ComboBox tbNomFournisseur;
         private TextBox tbNumeroProduitCatalogue;
         private TextBox tbPrixPiece;
-        private TextBox tbDateIntroPiece;
-        private TextBox tbDateOutroPiece;
+        private DateTimePicker tbDateIntroPiece;
+        private DateTimePicker tbDateOutroPiece;
         private TextBox tbDateApprov;
         private Button btnSaveVelo;
         private Button btnUpdateVelo;
@@ -43,6 +43,7 @@
         private Button btnSavePiece;
         private Button btnUpdatePiece;
         private Button btnDeletePiece;
+        private TextBox tbQuantite;
 
 
         private void InitializeComponent()
@@ -51,17 +52,17 @@
             this.dataGridViewPieces = new System.Windows.Forms.DataGridView();
             this.tbNumeroProduit = new System.Windows.Forms.TextBox();
             this.tbNom = new System.Windows.Forms.TextBox();
-            this.tbGrandeur = new System.Windows.Forms.TextBox();
+            this.tbGrandeur = new System.Windows.Forms.ComboBox();
             this.tbPrixUnitaire = new System.Windows.Forms.TextBox();
-            this.tbLigneProduit = new System.Windows.Forms.TextBox();
+            this.tbLigneProduit = new System.Windows.Forms.ComboBox();
             this.tbDateIntro = new System.Windows.Forms.DateTimePicker();
             this.tbDateOutro = new System.Windows.Forms.DateTimePicker();
             this.tbDescription = new System.Windows.Forms.TextBox();
-            this.tbNomFournisseur = new System.Windows.Forms.TextBox();
+            this.tbNomFournisseur = new System.Windows.Forms.ComboBox();
             this.tbNumeroProduitCatalogue = new System.Windows.Forms.TextBox();
             this.tbPrixPiece = new System.Windows.Forms.TextBox();
-            this.tbDateIntroPiece = new System.Windows.Forms.TextBox();
-            this.tbDateOutroPiece = new System.Windows.Forms.TextBox();
+            this.tbDateIntroPiece = new System.Windows.Forms.DateTimePicker();
+            this.tbDateOutroPiece = new System.Windows.Forms.DateTimePicker();
             this.tbDateApprov = new System.Windows.Forms.TextBox();
             this.btnSaveVelo = new System.Windows.Forms.Button();
             this.btnUpdateVelo = new System.Windows.Forms.Button();
@@ -69,6 +70,7 @@
             this.btnSavePiece = new System.Windows.Forms.Button();
             this.btnUpdatePiece = new System.Windows.Forms.Button();
             this.btnDeletePiece = new System.Windows.Forms.Button();
+            this.tbQuantite = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVelos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPieces)).BeginInit();
             this.SuspendLayout();
@@ -111,10 +113,18 @@
             // 
             // tbGrandeur
             // 
+            this.tbGrandeur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbGrandeur.FormattingEnabled = true;
+            this.tbGrandeur.Items.AddRange(new object[] {
+            "Adultes",
+            "Jeunes",
+            "Hommes",
+            "Dames",
+            "Garcons",
+            "Filles"});
             this.tbGrandeur.Location = new System.Drawing.Point(450, 450);
             this.tbGrandeur.Name = "tbGrandeur";
-            this.tbGrandeur.PlaceholderText = "Grandeur";
-            this.tbGrandeur.Size = new System.Drawing.Size(200, 31);
+            this.tbGrandeur.Size = new System.Drawing.Size(200, 33);
             this.tbGrandeur.TabIndex = 4;
             // 
             // tbPrixUnitaire
@@ -127,10 +137,16 @@
             // 
             // tbLigneProduit
             // 
+            this.tbLigneProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbLigneProduit.FormattingEnabled = true;
+            this.tbLigneProduit.Items.AddRange(new object[] {
+            "VTT",
+            "VeloDeCourse",
+            "BMX",
+            "Classique"});
             this.tbLigneProduit.Location = new System.Drawing.Point(230, 490);
             this.tbLigneProduit.Name = "tbLigneProduit";
-            this.tbLigneProduit.PlaceholderText = "Ligne de produit";
-            this.tbLigneProduit.Size = new System.Drawing.Size(200, 31);
+            this.tbLigneProduit.Size = new System.Drawing.Size(200, 33);
             this.tbLigneProduit.TabIndex = 6;
             // 
             // tbDateIntro
@@ -142,7 +158,7 @@
             // 
             // tbDateOutro
             // 
-            this.tbDateOutro.Location = new System.Drawing.Point(12, 530);
+            this.tbDateOutro.Location = new System.Drawing.Point(670, 490);
             this.tbDateOutro.Name = "tbDateOutro";
             this.tbDateOutro.Size = new System.Drawing.Size(200, 31);
             this.tbDateOutro.TabIndex = 8;
@@ -157,10 +173,11 @@
             // 
             // tbNomFournisseur
             // 
+            this.tbNomFournisseur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbNomFournisseur.FormattingEnabled = true;
             this.tbNomFournisseur.Location = new System.Drawing.Point(230, 650);
             this.tbNomFournisseur.Name = "tbNomFournisseur";
-            this.tbNomFournisseur.PlaceholderText = "Nom du fournisseur";
-            this.tbNomFournisseur.Size = new System.Drawing.Size(200, 31);
+            this.tbNomFournisseur.Size = new System.Drawing.Size(200, 33);
             this.tbNomFournisseur.TabIndex = 10;
             // 
             // tbNumeroProduitCatalogue
@@ -183,7 +200,6 @@
             // 
             this.tbDateIntroPiece.Location = new System.Drawing.Point(550, 570);
             this.tbDateIntroPiece.Name = "tbDateIntroPiece";
-            this.tbDateIntroPiece.PlaceholderText = "Date d\'introduction de la pièce";
             this.tbDateIntroPiece.Size = new System.Drawing.Size(300, 31);
             this.tbDateIntroPiece.TabIndex = 13;
             // 
@@ -191,7 +207,6 @@
             // 
             this.tbDateOutroPiece.Location = new System.Drawing.Point(12, 610);
             this.tbDateOutroPiece.Name = "tbDateOutroPiece";
-            this.tbDateOutroPiece.PlaceholderText = "Date de discontinuation de la pièce";
             this.tbDateOutroPiece.Size = new System.Drawing.Size(300, 31);
             this.tbDateOutroPiece.TabIndex = 14;
             // 
@@ -221,6 +236,7 @@
             this.btnUpdateVelo.TabIndex = 17;
             this.btnUpdateVelo.Text = "Modifier Vélo";
             this.btnUpdateVelo.UseVisualStyleBackColor = true;
+            this.btnUpdateVelo.Click += new System.EventHandler(this.btnUpdateVelo_Click);
             // 
             // btnDeleteVelo
             // 
@@ -230,6 +246,7 @@
             this.btnDeleteVelo.TabIndex = 18;
             this.btnDeleteVelo.Text = "Supprimer Vélo";
             this.btnDeleteVelo.UseVisualStyleBackColor = true;
+            this.btnDeleteVelo.Click += new System.EventHandler(this.btnDeleteVelo_Click);
             // 
             // btnSavePiece
             // 
@@ -239,6 +256,7 @@
             this.btnSavePiece.TabIndex = 19;
             this.btnSavePiece.Text = "Ajouter Pièce";
             this.btnSavePiece.UseVisualStyleBackColor = true;
+            this.btnSavePiece.Click += new System.EventHandler(this.btnSavePiece_Click);
             // 
             // btnUpdatePiece
             // 
@@ -248,6 +266,7 @@
             this.btnUpdatePiece.TabIndex = 20;
             this.btnUpdatePiece.Text = "Modifier Pièce";
             this.btnUpdatePiece.UseVisualStyleBackColor = true;
+            this.btnUpdatePiece.Click += new System.EventHandler(this.btnUpdatePiece_Click);
             // 
             // btnDeletePiece
             // 
@@ -257,6 +276,15 @@
             this.btnDeletePiece.TabIndex = 21;
             this.btnDeletePiece.Text = "Supprimer Pièce";
             this.btnDeletePiece.UseVisualStyleBackColor = true;
+            this.btnDeletePiece.Click += new System.EventHandler(this.btnDeletePiece_Click);
+            // 
+            // tbQuantite
+            // 
+            this.tbQuantite.Location = new System.Drawing.Point(450, 650);
+            this.tbQuantite.Name = "tbQuantite";
+            this.tbQuantite.PlaceholderText = "Quantite fournie";
+            this.tbQuantite.Size = new System.Drawing.Size(180, 31);
+            this.tbQuantite.TabIndex = 22;
             // 
             // VueProduit
             // 
@@ -283,6 +311,7 @@
             this.Controls.Add(this.tbNumeroProduit);
             this.Controls.Add(this.dataGridViewPieces);
             this.Controls.Add(this.dataGridViewVelos);
+            this.Controls.Add(this.tbQuantite);
             this.Name = "VueProduit";
             this.Text = "Gestion des Produits";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVelos)).EndInit();

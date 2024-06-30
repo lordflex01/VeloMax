@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace VeloMax
 {
     public class Velo
     {
-        public string NumeroProduit { get; set; }
+        public string? NumeroProduit { get; set; }
         public string Nom { get; set; }
         public string Grandeur { get; set; }
         public decimal PrixUnitaire { get; set; }
@@ -22,7 +23,7 @@ namespace VeloMax
             VTT,
             Classique,
             BMX,
-            VéloDeCourse
+            VeloDeCourse
         }
 
         public List<Velo> GetAllVelos()
@@ -42,7 +43,7 @@ namespace VeloMax
                     {
                         NumeroProduit = reader.GetString("numero_produit"),
                         Nom = reader.GetString("nom"),
-                        Grandeur = reader.IsDBNull(reader.GetOrdinal("grandeur")) ? null : reader.GetString("grandeur"),
+                        Grandeur = reader.GetString("grandeur"),
                         PrixUnitaire = reader.GetDecimal("prix_unitaire"),
                         LigneProduit = (Velo.LigneProduitEnum)Enum.Parse(typeof(Velo.LigneProduitEnum), reader.GetString("ligne_produit")),
                         DateIntroduction = reader.IsDBNull(reader.GetOrdinal("date_introduction")) ? (DateTime?)null : reader.GetDateTime("date_introduction"),
@@ -94,7 +95,7 @@ namespace VeloMax
             }
         }
 
-        public void UpdateVelo()
+        public void UpdateVelo(string NumeroProduit)
         {
             try
             {
@@ -131,12 +132,12 @@ namespace VeloMax
                 if (dbCon.IsConnect())
                 {
                     string query = "DELETE FROM velo WHERE numero_produit = @NumeroProduit";
-                    using (var command = new MySqlCommand(query, dbCon.Connection))
-                    {
-                        command.Parameters.AddWithValue("@NumeroProduit", numeroProduit);
-                        command.ExecuteNonQuery();
-                        dbCon.Close();
-                    }
+                    var command = new MySqlCommand(query, dbCon.Connection);
+
+                    command.Parameters.AddWithValue("@NumeroProduit", numeroProduit);
+                    command.ExecuteNonQuery();
+                    dbCon.Close();
+
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
